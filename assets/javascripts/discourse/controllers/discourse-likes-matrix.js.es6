@@ -26,11 +26,13 @@ export default Controller.extend({
               label: "Likes Received / Likes given",
               backgroundColor: "#0084ff",
               data: likesMatrixData,
-              pointRadius: likesMatrixData.map(() => 10),
-              pointHoverRadius: likesMatrixData.map(() => 10),
-              pointHitRadius: likesMatrixData.map(() => 10),
+              pointRadius: likesMatrixData.map(() => 18),
+              pointHoverRadius: likesMatrixData.map(() => 18),
+              pointHitRadius: likesMatrixData.map(() => 18),
               pointStyle: likesMatrixData.map(x => {
                 const img = document.createElement("IMG");
+                img.width = 36;
+                img.height = 36;
                 img.src = avatarUrl(x.__meta.avatarTemplate, "tiny");
                 return img;
               })
